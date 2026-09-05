@@ -2,7 +2,6 @@ Toh pehla document **`docs/TEST_STRATEGY.md`** se start karte hain.
 
 Root folder ke andar `docs/TEST_STRATEGY.md` file banayein aur neeche diya gaya complete code save karein:
 
-```markdown
 # 🥐 OvenGlow Bakery - Test Automation Strategy & Quality Engineering Blueprint
 
 ## 1. Executive Summary & Quality Vision
@@ -28,7 +27,7 @@ Strict Mode violations aur flaky locators se bachne ke liye following best pract
 
 * **Role-Based Primary Locators:** Accessible roles ko prefer kiya gaya hai (`getByRole('button', { name: /.../i })`).
 * **Scoped Parent Locators:** Reusable components (jaise header bag trigger vs card add-to-bag buttons) me parent container scoping use ki gayi hai:
-  ```typescript
+```typescript
   // Scoped to avoid strict-mode collisions:
   this.bagButton = page.locator('header, nav').getByRole('button', { name: /^bag/i });
 
