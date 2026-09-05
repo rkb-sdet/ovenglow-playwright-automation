@@ -11,8 +11,8 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 2 : undefined,
 reporter: [
-    ['html'], // Default Playwright HTML report
-    ['allure-playwright', { outputFolder: 'allure-results' }]
+    ['json', { outputFile: 'test-results/results.json' }],
+    ['html']
   ],
   use: {
     baseURL: process.env.BASE_URL || 'https://ovenglow-bakery.vercel.app',
