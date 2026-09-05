@@ -13,21 +13,16 @@ export class StorefrontPage extends BasePage {
   constructor(page: Page) {
     super(page);
 
-    // Navbar Search Input
     this.searchInput = page.locator('input[placeholder*="Search sourdough"]');
     this.clearSearchBtn = page.locator('button[aria-label="Clear search"]');
-
-    // 100% Eggless Toggle Container
     this.egglessToggle = page.locator('label:has-text("100% Eggless Only")');
 
-    // Shopping Bag Trigger (Scoped strictly to Header/Nav to avoid 'Add to Bag' buttons)
+    // Header bag button
     this.bagButton = page.locator('header, nav').getByRole('button', { name: /^bag/i });
-    this.bagBadge = this.bagButton.locator('span');
+    // Pick the count badge specifically (second/last span)
+    this.bagBadge = this.bagButton.locator('span').last();
 
-    // Product Cards Grid in Menu Section
     this.productCards = page.locator('section#menu').locator('div.group');
-
-    // Zero-State Message for Invalid Search
     this.emptyStateMsg = page.locator('text=No bakes matched your search');
   }
 
@@ -62,6 +57,6 @@ export class StorefrontPage extends BasePage {
   async openBag() {
     await expect(this.bagButton).toBeVisible({ timeout: 10000 });
     await this.bagButton.click();
-    await this.page.waitForTimeout(500); // Wait for cart drawer slide-over
+    await this.page.waitForTimeout(500);
   }
 }
