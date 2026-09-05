@@ -10,7 +10,7 @@ Production-grade, enterprise-standard End-to-End (E2E) automation framework jo *
 
 ---
 
-## 🏛️ Framework Architecture
+## Framework Architecture
 
 Framework modular separation aur dependency injection follow karta hai jisse zero test flakiness aur high maintainability ensure hoti hai:
 
@@ -62,7 +62,7 @@ graph TD
 
 ---
 
-## 🎯 Test Suite Highlights & Coverage (25 Tests)
+## Test Suite Highlights & Coverage (25 Tests)
 
 1. **Catalog & Search:** Real-time query debouncing, 100% Eggless dietary toggle filtering, zero-state search fallback.
 2. **Pricing & Cart Math Engine:**
@@ -85,7 +85,7 @@ graph TD
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 * **Node.js**: `v18.x` ya `v20.x` LTS
 * **npm**: `v9.x` ya newer
@@ -93,7 +93,7 @@ graph TD
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Repository Clone Karein
 ```bash
@@ -122,7 +122,7 @@ CI=false
 
 ---
 
-## 🧪 Test Execution Commands
+## Test Execution Commands
 
 ### Poora Test Suite Run Karein (Parallel)
 ```bash
@@ -161,7 +161,7 @@ npx playwright test tests/e2e/cart/cartPricingEdgeCases.spec.ts --debug
 
 ---
 
-## 📊 Reports & Diagnostics
+## Reports & Diagnostics
 
 Test execution ke baad HTML report aur trace inspect karne ke liye:
 
@@ -175,7 +175,7 @@ npx playwright show-trace test-results/<test-run-folder>/trace.zip
 
 ---
 
-## 🛡️ Best Practices & Quality Standards
+## Best Practices & Quality Standards
 
 * **No Arbitrary Sleep Waits:** Auto-waiting assertions (`toBeVisible()`, `networkidle`) state transitions ko handle karte hain.
 * **Strict Mode Compliance:** Saare locators header/aside containers me strictly scoped hain taaki multiple element matching errors na aayein.
@@ -184,7 +184,7 @@ npx playwright show-trace test-results/<test-run-folder>/trace.zip
 
 ---
 
-## 📚 Detailed Documentation
+## Detailed Documentation
 
 * [Test Strategy & Quality Engineering Blueprint](docs/TEST_STRATEGY.md)
 * [Requirements Traceability Matrix (RTM)](docs/TEST_EXECUTION_MATRIX.md)
@@ -195,7 +195,7 @@ npx playwright show-trace test-results/<test-run-folder>/trace.zip
 
 ---
 
-## 🤝 Contributing & Standards
+## Contributing & Standards
 1. Fork repository and create feature branch (`git checkout -b feature/cart-enhancement`).
 2. Write automated tests in `tests/e2e/<module>/`.
 3. Verify all 25 tests pass locally: `npx playwright test tests/e2e/ --project=Chromium`.
