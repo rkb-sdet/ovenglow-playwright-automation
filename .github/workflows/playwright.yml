@@ -37,15 +37,10 @@ jobs:
           STAFF_PASSWORD: ${{ secrets.STAFF_PASSWORD }}
           CI: true
 
-      - name: Generate Mochawesome Dashboard Report
-        if: always()
-        run: |
-          npx mochawesome-report-generator test-results/jsonReport.json --reportDir mochawesome-report --reportFilename index.html
-
-      - name: Upload Mochawesome Report Artifact
+      - name: Upload Playwright HTML Report
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: mochawesome-dashboard-report
-          path: mochawesome-report/
+          name: playwright-html-report
+          path: playwright-report/
           retention-days: 14
