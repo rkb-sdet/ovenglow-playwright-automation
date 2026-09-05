@@ -1,4 +1,4 @@
-# 🚀 OvenGlow Bakery - CI/CD Pipeline & Execution Architecture
+# OvenGlow Bakery - CI/CD Pipeline & Execution Architecture
 
 Yeh document continuous integration (CI) pipeline setup, headless execution triggers, secret injection, aur failure triage workflows ko explain karta hai.
 
